@@ -23,11 +23,18 @@
 	
 		function wylosuj()
 		{
-			
-			
+			var ile = parseInt(document.getElementById("ile").value);
+
+			var liczby = [];
+
+			for (var i=0; i<ile; i++){
 			
 			var liczba = Math.floor(Math.random() * 1000) + 1;
 			
+			liczby.push(liczba);
+			}
+
+			document.getElementById("wynik").innerText =  "Wynik: " + liczby.join(" ");
 		}
 
 	</script>

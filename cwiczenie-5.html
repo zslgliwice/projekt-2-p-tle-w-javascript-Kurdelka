@@ -23,7 +23,33 @@
 	
 		function generuj()
 		{
+			var liczba = parseInt(document.getElementById("x").value);
+			var wynik = document.getElementById("wynik");
+
+			wynik.innerHTML = "";
+
+			if(isNaN(liczba) || liczba<0){
+				wynik.innerHTML = "Paaanie! Z takim x to my daleko nie zajedziemy!";
+			}else{
+			for (var i=1; i<=liczba; i++){
+				wynik.innerHTML += liczby(i);
+			}
+			}
+
 			
+		}
+		
+		function liczby(liczba){
+
+			var suma = 1
+			var liczby = 1;
+		
+			for (var i=2; i<=liczba; i++){
+				suma+=i;
+				liczby += " + " + i;
+			}
+			
+			return liczby + " = " + suma + "<br>";
 		}
 
 	</script>

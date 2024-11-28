@@ -23,7 +23,22 @@
 	
 		function sledztwo()
 		{
-			
+			var morderca = parseInt(document.getElementById("liczba").value);
+			var wynik = document.getElementById("wynik");
+
+			wynik.innerHTML = "";
+
+			for (var i=0; i<=9; i++){
+				if(i == morderca){
+					wynik.innerHTML += morderca + " jest morderca! Aresztuj je Watsonie! <br>";
+				}else if(morderca<10 && morderca>=0){
+					wynik.innerHTML +=i + " jest niewinne, jest o "+ (i < morderca ? morderca - i + " mniejsze niż morderca" : i - morderca + " większe niż morderca") +"<br>";
+				}else{
+					wynik.innerHTML = "No sh*t Sherlock!";
+				}
+			}
+
+		
 		}
 
 	</script>
